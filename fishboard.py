@@ -1,21 +1,3 @@
-# doupravena binární klasifikace → v defaultním nastavení se přizpůsobí
-# navrhne sloupce pro odezvu (s kategorickými hodnotami, jsou-li 2, není
-# třeba již nic dalšího dělat, je-li jich víc, představi seznam unikatnich
-# kategorických hodnot a automatick\ vezme první z nich) pak odstraní
-# všechny ostatní sloupce s kategrickýmmi hodnotami a už alou fituje, predikuje
-# vyhodnocuje...
-# chyba u zobr. pca grafu: All arguments should have the same length.
-# The length of argument size is 7, whereas the length of previously-processed
-# arguments ['x', 'y'] is 3 → nakonec jsem to neřešila
-
-# další problém se seznamem kategoických hodnot u binární klasifikace
-# musela jsem jej seřadit abecedně, jinak výstup matice záměn nevypadala
-# hezky → možná budu potřebovat provést drobnou úpravu v souladu s get_dummies
-# nakonec jsem to vrátila do pův. nastavení, nemělo stratify na to žádný vliv
-# i když jsem dala, aby se stratify zaměřilo na species_whitefish, stejně to
-# vracelo matici záměn s 1 nikoliv se 4 čtverci (nedošlo k rovnoměrnému
-# rozdělení dat při train_test_split)
-
 import functools
 import io
 import logging
